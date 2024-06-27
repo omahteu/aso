@@ -1,39 +1,17 @@
 $(document).ready(function () {
-    // Função para carregar e exibir os nomes fantasia das empresas em um select
-    function carregarNomesFantasia() {
+
+    function carregarUnidades() {
         // Obtém os dados da localStorage
-        var empresas = JSON.parse(localStorage.getItem('empresas')) || [];
+        var empresas = JSON.parse(localStorage.getItem('unidades')) || [];
 
         // Seleciona o select onde os nomes fantasia serão exibidos
-        var select = $('#eEmpresas');
+        var select = $('#unidade');
 
         // Limpa as opções atuais do select
         select.empty();
 
         // Adiciona uma opção padrão
-        select.append('<option value="">Selecione uma empresa...</option>');
-
-        // Itera sobre os dados das empresas e adiciona os nomes fantasia ao select
-        empresas.forEach(function (empresa) {
-            select.append('<option value="' + empresa.nomeFantasia + '">' + empresa.nomeFantasia + '</option>');
-        });
-    }
-
-    // Chama a função para carregar e exibir os nomes fantasia ao carregar a página
-    carregarNomesFantasia();
-
-    function carregarNomesCredenciadas() {
-        // Obtém os dados da localStorage
-        var empresas = JSON.parse(localStorage.getItem('credenciadas')) || [];
-
-        // Seleciona o select onde os nomes fantasia serão exibidos
-        var select = $('#eCredenciadas');
-
-        // Limpa as opções atuais do select
-        select.empty();
-
-        // Adiciona uma opção padrão
-        select.append('<option value="">Selecione uma empresa...</option>');
+        select.append('<option hidden>Selecione uma empresa...</option>');
 
         // Itera sobre os dados das empresas e adiciona os nomes fantasia ao select
         empresas.forEach(function (empresa) {
@@ -41,21 +19,105 @@ $(document).ready(function () {
         });
     }
 
-    // Chama a função para carregar e exibir os nomes fantasia ao carregar a página
+    carregarUnidades()
+
+    function carregarNomesFantasia() {
+        // Obtém os dados da localStorage
+        var empresas = JSON.parse(localStorage.getItem('empresas')) || [];
+
+        // Seleciona o select onde os nomes fantasia serão exibidos
+        var select = $('#empresa');
+
+        // Limpa as opções atuais do select
+        select.empty();
+
+        // Adiciona uma opção padrão
+        select.append('<option hidden>Selecione uma empresa...</option>');
+
+        // Itera sobre os dados das empresas e adiciona os nomes fantasia ao select
+        empresas.forEach(function (empresa) {
+            select.append('<option value="' + empresa.nomeFantasia + '">' + empresa.nomeFantasia + '</option>');
+        });
+    }
+
+    carregarNomesFantasia();
+
+    function carregarNomesCredenciadas() {
+        // Obtém os dados da localStorage
+        var empresas = JSON.parse(localStorage.getItem('credenciadas')) || [];
+
+        // Seleciona o select onde os nomes fantasia serão exibidos
+        var select = $('#credenciada');
+
+        // Limpa as opções atuais do select
+        select.empty();
+
+        // Adiciona uma opção padrão
+        select.append('<option hidden>Selecione uma empresa...</option>');
+
+        // Itera sobre os dados das empresas e adiciona os nomes fantasia ao select
+        empresas.forEach(function (empresa) {
+            select.append('<option value="' + empresa.nome + '">' + empresa.nome + '</option>');
+        });
+    }
+
     carregarNomesCredenciadas();
+
+    function carregarTiposExames() {
+        // Obtém os dados da localStorage
+        var empresas = JSON.parse(localStorage.getItem('tipos')) || [];
+
+        // Seleciona o select onde os nomes fantasia serão exibidos
+        var select = $('#tiposExame');
+
+        // Limpa as opções atuais do select
+        select.empty();
+
+        // Adiciona uma opção padrão
+        select.append('<option hidden>Selecione uma empresa...</option>');
+
+        // Itera sobre os dados das empresas e adiciona os nomes fantasia ao select
+        empresas.forEach(function (empresa) {
+            select.append('<option value="' + empresa.nome + '">' + empresa.nome + '</option>');
+        });
+    }
+
+    carregarTiposExames()
+
+    function carregarNomesExames() {
+        // Obtém os dados da localStorage
+        var empresas = JSON.parse(localStorage.getItem('nomes')) || [];
+
+        // Seleciona o select onde os nomes fantasia serão exibidos
+        var select = $('#nomesExames');
+
+        // Limpa as opções atuais do select
+        select.empty();
+
+        // Adiciona uma opção padrão
+        select.append('<option hidden>Selecione uma empresa...</option>');
+
+        // Itera sobre os dados das empresas e adiciona os nomes fantasia ao select
+        empresas.forEach(function (empresa) {
+            select.append('<option value="' + empresa.nome + '">' + empresa.nome + '</option>');
+        });
+    }
+
+    carregarNomesExames()
 
     $('form').submit(function (event) {
         event.preventDefault();
 
         // Define um array para armazenar os nomes dos campos que queremos capturar
         var campos = [
+            'unidade',
+            'empresa',
+            'credenciada',
             'nome',
-            'tipoExame', // Inscrição Estadual
-            'nomeExame', // CNPJ
+            'tiposExame', // Inscrição Estadual
+            'nomesExames', // CNPJ
             'valorExame', // Telefone
             'porcentagem',
-            'eEmpresas', // CEP
-            'eCredenciadas'
         ];
 
         var empresa = {};

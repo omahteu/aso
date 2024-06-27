@@ -6,7 +6,7 @@ $(document).ready(function () {
         
         // Seleciona a tabela onde os dados serão exibidos
         var tabela = $('#tabelaPrecos');
-        console.log(tabela)
+
         // Limpa o conteúdo atual da tabela
         tabela.empty();
 
@@ -14,13 +14,14 @@ $(document).ready(function () {
         precos.forEach(function (empresa, index) {
             var row = '<tr>' +
                 //'<td>' + (index + 1) + '</td>' +
+                '<td>' + empresa.unidade + '</td>' +
+                '<td>' + empresa.empresa + '</td>' +
+                '<td>' + empresa.credenciada + '</td>' +
                 '<td>' + empresa.nome + '</td>' +
-                '<td>' + empresa.tipoExame + '</td>' +
-                '<td>' + empresa.nomeExame + '</td>' +
+                '<td>' + empresa.tiposExame + '</td>' +
+                '<td>' + empresa.nomesExames + '</td>' +
                 '<td>' + empresa.valorExame + '</td>' +
                 '<td>' + empresa.porcentagem + '</td>' +
-                '<td>' + empresa.eEmpresas + '</td>' +
-                '<td>' + empresa.eCredenciadas + '</td>' +
                 '</tr>';
             tabela.append(row);
         });

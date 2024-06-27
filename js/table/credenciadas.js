@@ -6,16 +6,18 @@ $(document).ready(function () {
         
         // Seleciona a tabela onde os dados serão exibidos
         var tabela = $('#tabelacredenciadas');
-        console.log(tabela)
+
         // Limpa o conteúdo atual da tabela
         tabela.empty();
 
         // Itera sobre os dados das credenciadas e cria as linhas da tabela
         credenciadas.forEach(function (empresa, index) {
             var row = '<tr>' +
-                '<td>' + empresa.eCredenciadas + '</td>' +
+                '<td>' + empresa.unidade + '</td>' +
+                '<td>' + empresa.empresa + '</td>' +
                 '<td>' + empresa.nome + '</td>' +
                 '<td>' + empresa.ie + '</td>' +
+                '<td>' + empresa.matricula + '</td>' +
                 '<td>' + empresa.cnpj + '</td>' +
                 '<td>' + empresa.telefone + '</td>' +
                 '<td>' + empresa.email + '</td>' +

@@ -16,7 +16,6 @@ $(document).ready(function () {
                 //'<td>' + (index + 1) + '</td>' +
                 '<td>' + empresa.nome + '</td>' +
                 '<td>' + empresa.email + '</td>' +
-                '<td>' + empresa.funcao + '</td>' +
                 '<td>' + empresa.perfil + '</td>' +
                 '</tr>';
             tabela.append(row);

@@ -13,9 +13,10 @@ $(document).ready(function () {
         // Itera sobre os dados das empresas e cria as linhas da tabela
         empresas.forEach(function (empresa, index) {
             var row = '<tr>' +
-                //'<td>' + (index + 1) + '</td>' +
+                '<td>' + empresa.unidades + '</td>' +
                 '<td>' + empresa.nomeFantasia + '</td>' +
                 '<td>' + empresa.ie + '</td>' +
+                '<td>' + empresa.matricula + '</td>' +
                 '<td>' + empresa.cnpj + '</td>' +
                 '<td>' + empresa.telefone + '</td>' +
                 '<td>' + empresa.cep + '</td>' +

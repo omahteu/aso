@@ -6,7 +6,7 @@ $(document).ready(function () {
         
         // Seleciona a tabela onde os dados serão exibidos
         var tabela = $('#tabelaUnidades');
-        console.log(tabela)
+
         // Limpa o conteúdo atual da tabela
         tabela.empty();
 

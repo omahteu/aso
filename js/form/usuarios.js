@@ -7,7 +7,6 @@ $(document).ready(function() {
         'nome', // Nome Fantasia
         'email', // Inscrição Estadual
         'senha', // CNPJ
-        'funcao', // Telefone
         'perfil', // CEP
       ];
   

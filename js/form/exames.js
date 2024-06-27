@@ -44,46 +44,75 @@ $(document).ready(function () {
     // Chama a função para carregar e exibir os nomes fantasia ao carregar a página
     carregarNomesUnidades();
 
-    $('form').submit(function (event) {
-        event.preventDefault();
+    // $('form').submit(function (event) {
+    //     event.preventDefault();
 
+    //     // Define um array para armazenar os nomes dos campos que queremos capturar
+    //     var campos = [
+    //         'tipoExame',
+    //         'nomeExame',
+    //         'nome', // Nome Fantasia
+    //         'vencimento'
+    //     ];
+
+    //     var empresa = {};
+
+    //     // Itera sobre os campos definidos e captura os valores
+    //     campos.forEach(function (campoId) {
+    //         empresa[campoId] = $('#' + campoId).val();
+    //     });
+
+    //     var credenciadas = JSON.parse(localStorage.getItem('credenciadas')) || [];
+    //     credenciadas.push(empresa);
+    //     localStorage.setItem('credenciadas', JSON.stringify(credenciadas));
+
+
+
+    //     alert('Empresa Credenciada salva com sucesso!');
+
+    //     $('form')[0].reset();
+    //     l//ocation.reload();
+    // });
+
+    //$('form').submit(function (event) {
+    $(document).on("submit", "form", function(event) {
+        event.preventDefault();
+    
         // Define um array para armazenar os nomes dos campos que queremos capturar
         var campos = [
-            'unidade',
-            'empresa',
-            'eCredenciadas', // Nome Fantasia
-            'nome',
-            'ie', // Inscrição Estadual
-            'matricula',
-            'cnpj', // CNPJ
-            'telefone', // Telefone
-            'email',
-            'cep', // CEP
-            'rua', // Rua
-            'numero', // Número
-            'complemento', // Complemento
-            'bairro', // Bairro
-            'cidade', // Cidade
-            'estado', // Estado
-            'observacoes'
+            'tipoExame',
+            'nomeExame',
+            'nome', // Nome Fantasia
+            'vencimento'
         ];
-
+    
         var empresa = {};
-
+        var tabela = '';
+    
         // Itera sobre os campos definidos e captura os valores
         campos.forEach(function (campoId) {
-            empresa[campoId] = $('#' + campoId).val();
+            // Verifica se o campo é tipoExame ou nomeExame e se está marcado
+            if (campoId === 'tipoExame' && $('#' + campoId).is(':checked')) {
+                empresa[campoId] = $('#' + campoId).val();
+                tabela = 'tipos';
+            } else if (campoId === 'nomeExame' && $('#' + campoId).is(':checked')) {
+                empresa[campoId] = $('#' + campoId).val();
+                tabela = 'nomes';
+            } else if (campoId !== 'tipoExame' && campoId !== 'nomeExame') {
+                empresa[campoId] = $('#' + campoId).val();
+            }
         });
-
-        var credenciadas = JSON.parse(localStorage.getItem('credenciadas')) || [];
+    
+        // Define a tabela correta para salvar
+        var credenciadas = JSON.parse(localStorage.getItem(tabela)) || [];
         credenciadas.push(empresa);
-        localStorage.setItem('credenciadas', JSON.stringify(credenciadas));
-
-
-
-        alert('Empresa Credenciada salva com sucesso!');
-
+        localStorage.setItem(tabela, JSON.stringify(credenciadas));
+    
+        alert('Informação sobre Exame salvo com sucesso!');
+    
         $('form')[0].reset();
         location.reload();
     });
+    
+    
 });
