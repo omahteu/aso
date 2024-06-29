@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofício</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .document-body {
+            margin: 0 15%;
+            text-align: justify;
+        }
+        .signature {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .logoaso {
+            height: 200px;
+        }
+        .assinatura {
+            height: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="header">
+            <img class="logoaso" src="../../images/aso.jpeg" alt="">
+            <h5>ASO - Atestado de Saúde Ocupacional</h5>
+            <p>____________________________________________________________________________________________</p>
+            <!-- <h6>Local e Data: Cidade, XX de junho de 2024</h6> -->
+        </div>
+        <div class="document-body">
+            <p>
+                Empresa: Latam Linhas Aereas CNPJ: 23.434.432/0001-23
+            </p>
+            <p>
+                Colaborador: Jośe Maria Marim Data de Nascimento: 23/11/1997 (26 Anos)
+            </p>
+            <p>
+                RG: 0000000000000000000 CPF: 000.000.000-00
+            </p>
+            <p>
+                Função: Vendedor (a)
+            </p>
+            <p>_______________________________________________________________________________________________</p>
+            <p>(   ) Admissional  (   ) Periódico  (   ) Retorno ao Trabalho  (   ) Mudança de Função  (   ) Demissional</p>
+            <p>
+                __________________________________________________________________________________________________________
+            </p>
+            <p>
+                Exames
+            </p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Exame</th>
+                        <th>Vencimento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Exame de Urina</td>
+                        <td>90 dias</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <p>
+                Atesto para todos os fins legais previstos na NR-7, da portaria 3214/78, com alteração da Port/SSST nº24...
+            </p>
+            <p>
+                ( ) Apto  ( ) Inapto
+            </p>
+            <br>
+            <img src="" alt="">
+            <p class="signature">___________________________________________________________</p>
+            <p class="signature">Médico (a) Responsável</p>
+            <br>
+            <img src="" alt="">
+            <p class="signature">___________________________________________________________</p>
+            <p class="signature">Colaborador (a)</p>
+
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            print()
+            
+
+            function checkPrintStatus() {
+                setTimeout(function() {
+                    if (document.readyState === 'complete') {
+                        alert('Impressão concluída.');
+                        window.close()
+                    } else {
+                        alert('Impressão não concluída.');
+                    }
+                }, 5000); // Verifica após 5 segundos (ajuste conforme necessário)
+            }
+            checkPrintStatus()
+        })
+    </script>
+</body>
+</html>
