@@ -24,4 +24,5 @@ $(document).ready(function () {
 
     // Chama a função para carregar e exibir os dados ao carregar a página
     carregarEmpresas();
+
 });
