@@ -511,14 +511,17 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Empresas</h4>
-                  <p class="card-description">
-                    <select name="" class="form-control col-lg-4" id="filtroEmpresa">
-                    </select>
-                  </p>
+                  <div class="row">
+                    <select name="" class="form-control col-lg-4" id="filtroEmpresa"></select>
+                    <button class="btn btn-success" type="button">IMPRIMIR</button>
+                    <button class="btn btn-warning" type="button">ENVIAR POR EMAIL</button>
+                  </div>
                   <div class="table-responsive">
                     <table class="table table-striped">
                       <thead>
                         <tr>
+                          <th><button class="btn btn-success"></button></th>
+                          <th><button class="btn btn-warning"></button></th>
                           <th>Unidade</th>
                           <th>Nome Fantasia</th>
                           <th>Inscrição Estadual</th>

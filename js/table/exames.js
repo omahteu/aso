@@ -13,6 +13,8 @@ $(document).ready(function () {
         // Itera sobre os dados das empresas e cria as linhas da tabela
         empresas.forEach(function (empresa, index) {
             var row = '<tr>' +
+                '<td> <input type="checkbox" name="" id=""> </td>' +
+                '<td> <input type="checkbox" name="" id=""> </td>' +
                 '<td>' + empresa.nomeExame + '</td>' +
                 '<td>' + empresa.nome + '</td>' +
                 '<td>' + empresa.vencimento + '</td>' +
@@ -34,6 +36,8 @@ $(document).ready(function () {
         // Itera sobre os dados das empresas e cria as linhas da tabela
         empresas.forEach(function (empresa, index) {
             var row = '<tr>' +
+                '<td> <input type="checkbox" name="" id=""> </td>' +
+                '<td> <input type="checkbox" name="" id=""> </td>' +
                 '<td> Tipo </td>' +
                 '<td>' + empresa.nome + '</td>' +
                 '</tr>';

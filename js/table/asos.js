@@ -1,17 +1,28 @@
 $(document).ready(function () {
+    
 
     function carregarprecos() {
         var precos = JSON.parse(localStorage.getItem('asos')) || [];
         var tabela = $('#tabelaAsos');
         tabela.empty();
+
+        function formatarCPF(cpf) {
+            return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+        }
+
         precos.forEach(function (empresa, index) {
+
+            var cpf = formatarCPF(empresa.cpf);
+
             var row = '<tr>' +
+                '<td> <input type="checkbox" name="" id=""> </td>' +
+                '<td> <input type="checkbox" name="" id=""> </td>' +
                 '<td>' + empresa.unidade + '</td>' +
                 '<td>' + empresa.empresa + '</td>' +
                 '<td>' + empresa.credenciada + '</td>' +
                 '<td>' + empresa.nome + '</td>' +
                 '<td>' + empresa.rg + '</td>' +
-                '<td>' + empresa.cpf + '</td>' +
+                '<td>' + cpf + '</td>' +
                 '<td>' + empresa.nascimento + '</td>' +
                 '<td>' + empresa.sexo + '</td>' +
                 '<td>' + empresa.funcao + '</td>' +
@@ -43,9 +54,13 @@ $(document).ready(function () {
 
     $('#filtroEmpresa').change(function() {
         var empresaSelecionada = $(this).val(); // Captura o valor selecionado
-        console.log(empresaSelecionada)
+        
         // Limpa a tabela antes de inserir novos dados
         $('#tabelaAsos').empty();
+
+        function formatarCPF(cpf) {
+            return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+        }
 
         // Verifica se há algum valor selecionado
         if (empresaSelecionada !== '') {
@@ -59,13 +74,16 @@ $(document).ready(function () {
 
             // Insere os dados filtrados na tabela
             $.each(dadosFiltrados, function(i, item) {
+                var cpf = formatarCPF(item.cpf);
                 var newRow = '<tr>' +
+                                '<td> <input type="checkbox" name="" id=""> </td>' +
+                                '<td> <input type="checkbox" name="" id=""> </td>' +
                                 '<td>' + item.unidade + '</td>' +
                                 '<td>' + item.empresa + '</td>' +
                                 '<td>' + item.credenciada + '</td>' +
                                 '<td>' + item.nome + '</td>' +
                                 '<td>' + item.rg + '</td>' +
-                                '<td>' + item.cpf + '</td>' +
+                                '<td>' + cpf + '</td>' +
                                 '<td>' + item.nascimento + '</td>' +
                                 '<td>' + item.sexo + '</td>' +
                                 '<td>' + item.funcao + '</td>' +

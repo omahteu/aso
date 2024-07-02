@@ -13,7 +13,8 @@ $(document).ready(function () {
         // Itera sobre os dados das precos e cria as linhas da tabela
         precos.forEach(function (empresa, index) {
             var row = '<tr>' +
-                //'<td>' + (index + 1) + '</td>' +
+                '<td> <input type="checkbox" name="" id=""> </td>' +
+                '<td> <input type="checkbox" name="" id=""> </td>' +
                 '<td>' + empresa.unidade + '</td>' +
                 '<td>' + empresa.empresa + '</td>' +
                 '<td>' + empresa.credenciada + '</td>' +
@@ -53,7 +54,7 @@ $(document).ready(function () {
 
     $('#filtroEmpresa').change(function() {
         var empresaSelecionada = $(this).val(); // Captura o valor selecionado
-        console.log(empresaSelecionada)
+        
         // Limpa a tabela antes de inserir novos dados
         $('#tabelaAsos').empty();
 
@@ -70,6 +71,8 @@ $(document).ready(function () {
             // Insere os dados filtrados na tabela
             $.each(dadosFiltrados, function(i, item) {
                 var newRow = '<tr>' +
+                                '<td> <input type="checkbox" name="" id=""> </td>' +
+                                '<td> <input type="checkbox" name="" id=""> </td>' +
                                 '<td>' + item.unidade + '</td>' +
                                 '<td>' + item.empresa + '</td>' +
                                 '<td>' + item.credenciada + '</td>' +

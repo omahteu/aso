@@ -13,6 +13,8 @@ $(document).ready(function () {
         // Itera sobre os dados das empresas e cria as linhas da tabela
         empresas.forEach(function (empresa, index) {
             var row = '<tr>' +
+                '<td> <input type="checkbox" name="" id=""> </td>' +
+                '<td> <input type="checkbox" name="" id=""> </td>' +
                 '<td>' + empresa.unidades + '</td>' +
                 '<td>' + empresa.nomeFantasia + '</td>' +
                 '<td>' + empresa.ie + '</td>' +
@@ -74,6 +76,8 @@ $(document).ready(function () {
             // Insere os dados filtrados na tabela
             $.each(dadosFiltrados, function(i, item) {
                 var newRow = '<tr>' +
+                                '<td> <input type="checkbox" name="" id=""> </td>' +
+                                '<td> <input type="checkbox" name="" id=""> </td>' +
                                 '<td>' + item.unidade + '</td>' +
                                 '<td>' + item.empresa + '</td>' +
                                 '<td>' + item.credenciada + '</td>' +
