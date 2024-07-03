@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../../vendors/select2/select2.min.css">
+  <link rel="stylesheet" href="../../vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- ... Seu código HTML existente aqui ... -->
+
+    <div class="main-panel">        
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-12 grid-margin">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Emissão ASO</h4>
+                <form class="form-sample" id="seuFormulario">
+                  <!-- Seu formulário existente aqui -->
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Tipo do Exame</label>
+                        <div class="col-sm-9">
+                          <select class="form-control" id="tiposExame" multiple>
+                            <!-- Opções do Select2 serão adicionadas dinamicamente aqui -->
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Outros campos do formulário aqui -->
+                  </div>
+
+                  <button type="submit" class="btn btn-success">Enviar</button>
+                  <button type="reset" class="btn btn-danger">Limpar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- content-wrapper ends -->
+      <!-- partial:../../partials/_footer.html -->
+      <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+        </div>
+      </footer>
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="../../vendors/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<script src="../../vendors/select2/select2.min.js"></script>
+<!-- End plugin js for this page -->
+<!-- Custom js for this page-->
+<script type="module" src="../../js/form/aso.js"></script>
+<!-- End custom js for this page-->
+
+<script>
+  $(document).ready(function() {
+    // Exemplo de opções (pode ser populado dinamicamente)
+    var tiposExameOptions = [
+      { value: 'opcao1', text: 'Opção 1' },
+      { value: 'opcao2', text: 'Opção 2' },
+      { value: 'opcao3', text: 'Opção 3' },
+      { value: 'opcao4', text: 'Opção 4' }
+    ];
+  
+    // Popular as opções no select usando Select2
+    $('#tiposExame').select2({
+      data: tiposExameOptions,
+      placeholder: 'Selecione os tipos de exame',
+      allowClear: true // Adiciona a opção de limpar seleção
+    });
+  
+    // Capturar os itens selecionados quando o formulário for submetido
+    $('#seuFormulario').submit(function(event) {
+      event.preventDefault(); // Previne o envio padrão do formulário para exemplo aqui
+  
+      var selectedValues = $('#tiposExame').val();
+      console.log('Itens selecionados:', selectedValues);
+      
+      // Aqui você pode fazer o que quiser com os valores selecionados
+  
+      // Exemplo de envio via AJAX
+      /*
+      $.ajax({
+        url: 'seu_endpoint_de_processamento',
+        method: 'POST',
+        data: { tiposExame: selectedValues },
+        success: function(response) {
+          console.log('Resposta do servidor:', response);
+        },
+        error: function(error) {
+          console.error('Erro ao enviar dados:', error);
+        }
+      });
+      */
+    });
+  });
+</script>
+
+</body>
+
+</html>

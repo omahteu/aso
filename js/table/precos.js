@@ -18,7 +18,6 @@ $(document).ready(function () {
                 '<td>' + empresa.unidade + '</td>' +
                 '<td>' + empresa.empresa + '</td>' +
                 '<td>' + empresa.credenciada + '</td>' +
-                '<td>' + empresa.nome + '</td>' +
                 '<td>' + empresa.tiposExame + '</td>' +
                 '<td>' + empresa.nomesExames + '</td>' +
                 '<td>' + empresa.valorExame + '</td>' +
@@ -73,21 +72,13 @@ $(document).ready(function () {
                 var newRow = '<tr>' +
                                 '<td> <input type="checkbox" name="" id=""> </td>' +
                                 '<td> <input type="checkbox" name="" id=""> </td>' +
-                                '<td>' + item.unidade + '</td>' +
-                                '<td>' + item.empresa + '</td>' +
-                                '<td>' + item.credenciada + '</td>' +
-                                '<td>' + item.nome + '</td>' +
-                                '<td>' + item.rg + '</td>' +
-                                '<td>' + item.cpf + '</td>' +
-                                '<td>' + item.nascimento + '</td>' +
-                                '<td>' + item.sexo + '</td>' +
-                                '<td>' + item.funcao + '</td>' +
-                                '<td>' + item.dataExame + '</td>' +
-                                '<td>' + item.tiposExame + '</td>' +
-                                '<td>' + item.nomesExames + '</td>' +
-                                '<td>' + item.situacao + '</td>' +
-                                '<td>' + item.observacao + '</td>' +
-                                '<td>' + item.pagamento + '</td>' +
+                                '<td>' + empresa.unidade + '</td>' +
+                                '<td>' + empresa.empresa + '</td>' +
+                                '<td>' + empresa.credenciada + '</td>' +
+                                '<td>' + empresa.tiposExame + '</td>' +
+                                '<td>' + empresa.nomesExames + '</td>' +
+                                '<td>' + empresa.valorExame + '</td>' +
+                                '<td>' + empresa.porcentagem + '</td>' +
                              '</tr>';
                 $('#tabelaAsos').append(newRow);
             });

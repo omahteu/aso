@@ -167,3 +167,45 @@ $(document).ready(function () {
         window.open("../../pages/forms/opcoes.html", "_blank");
     });
 });
+
+$(document).ready(function() {
+    // Exemplo de opções (pode ser populado dinamicamente)
+    var tiposExameOptions = [
+      { value: 'opcao1', text: 'Opção 1' },
+      { value: 'opcao2', text: 'Opção 2' },
+      { value: 'opcao3', text: 'Opção 3' },
+      { value: 'opcao4', text: 'Opção 4' }
+    ];
+  
+    // Popular as opções no select usando Select2
+    $('#tiposExame').select2({
+      data: tiposExameOptions,
+      placeholder: 'Selecione os tipos de exame',
+      allowClear: true // Adiciona a opção de limpar seleção
+    });
+  
+    // Capturar os itens selecionados quando o formulário for submetido
+    $('#seuFormulario').submit(function(event) {
+      event.preventDefault(); // Previne o envio padrão do formulário para exemplo aqui
+  
+      var selectedValues = $('#tiposExame').val();
+      console.log('Itens selecionados:', selectedValues);
+      
+      // Aqui você pode fazer o que quiser com os valores selecionados
+  
+      // Exemplo de envio via AJAX
+      /*
+      $.ajax({
+        url: 'seu_endpoint_de_processamento',
+        method: 'POST',
+        data: { tiposExame: selectedValues },
+        success: function(response) {
+          console.log('Resposta do servidor:', response);
+        },
+        error: function(error) {
+          console.error('Erro ao enviar dados:', error);
+        }
+      });
+      */
+    });
+  });

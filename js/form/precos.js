@@ -113,7 +113,6 @@ $(document).ready(function () {
             'unidade',
             'empresa',
             'credenciada',
-            'nome',
             'tiposExame', // Inscrição Estadual
             'nomesExames', // CNPJ
             'valorExame', // Telefone
