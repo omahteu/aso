@@ -11,7 +11,7 @@ $(document).ready(function () {
         select.empty();
 
         // Adiciona uma opção padrão
-        select.append('<option hidden>Selecione uma empresa...</option>');
+        select.append('<option hidden>Selecione...</option>');
 
         // Itera sobre os dados das empresas e adiciona os nomes fantasia ao select
         empresas.forEach(function (empresa) {
@@ -32,7 +32,7 @@ $(document).ready(function () {
         select.empty();
 
         // Adiciona uma opção padrão
-        select.append('<option hidden>Selecione uma empresa...</option>');
+        select.append('<option hidden>Selecione...</option>');
 
         // Itera sobre os dados das empresas e adiciona os nomes fantasia ao select
         empresas.forEach(function (empresa) {
@@ -53,7 +53,7 @@ $(document).ready(function () {
         select.empty();
 
         // Adiciona uma opção padrão
-        select.append('<option hidden>Selecione uma empresa...</option>');
+        select.append('<option hidden>Selecione...</option>');
 
         // Itera sobre os dados das empresas e adiciona os nomes fantasia ao select
         empresas.forEach(function (empresa) {
@@ -74,7 +74,7 @@ $(document).ready(function () {
         select.empty();
 
         // Adiciona uma opção padrão
-        select.append('<option hidden>Selecione uma empresa...</option>');
+        select.append('<option hidden>Selecione o tipo do exame...</option>');
 
         // Itera sobre os dados das empresas e adiciona os nomes fantasia ao select
         empresas.forEach(function (empresa) {
@@ -95,7 +95,7 @@ $(document).ready(function () {
         select.empty();
 
         // Adiciona uma opção padrão
-        select.append('<option hidden>Selecione uma empresa...</option>');
+        select.append('<option hidden>Selecione...</option>');
 
         // Itera sobre os dados das empresas e adiciona os nomes fantasia ao select
         empresas.forEach(function (empresa) {
@@ -106,19 +106,15 @@ $(document).ready(function () {
     carregarNomesExames()
 
     function carregarNomesFuncoes() {
-        // Obtém os dados da localStorage
+
         var empresas = JSON.parse(localStorage.getItem('funcoes')) || [];
 
-        // Seleciona o select onde os nomes fantasia serão exibidos
         var select = $('#funcao');
 
-        // Limpa as opções atuais do select
         select.empty();
 
-        // Adiciona uma opção padrão
         select.append('<option hidden>Selecione...</option>');
 
-        // Itera sobre os dados das empresas e adiciona os nomes fantasia ao select
         empresas.forEach(function (empresa) {
             select.append('<option value="' + empresa.nome + '">' + empresa.nome + '</option>');
         });
@@ -178,9 +174,9 @@ $(document).ready(function() {
     ];
   
     // Popular as opções no select usando Select2
-    $('#tiposExame').select2({
+    $('#nomesExames').select2({
       data: tiposExameOptions,
-      placeholder: 'Selecione os tipos de exame',
+      placeholder: 'Selecione...',
       allowClear: true // Adiciona a opção de limpar seleção
     });
   
@@ -191,21 +187,5 @@ $(document).ready(function() {
       var selectedValues = $('#tiposExame').val();
       console.log('Itens selecionados:', selectedValues);
       
-      // Aqui você pode fazer o que quiser com os valores selecionados
-  
-      // Exemplo de envio via AJAX
-      /*
-      $.ajax({
-        url: 'seu_endpoint_de_processamento',
-        method: 'POST',
-        data: { tiposExame: selectedValues },
-        success: function(response) {
-          console.log('Resposta do servidor:', response);
-        },
-        error: function(error) {
-          console.error('Erro ao enviar dados:', error);
-        }
-      });
-      */
     });
   });
