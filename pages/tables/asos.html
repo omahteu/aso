@@ -536,8 +536,10 @@
                     <button>EXPORTAR</button>
                   </p> -->
                   <div class="row">
-                    <select name="" class="form-control col-lg-4" id="filtroEmpresa"></select>
-                    <select name="" class="form-control col-lg-4" id="filtroCredenciada"></select>
+                    <select name="" class="form-control col-lg-3" id="filtroEmpresa"></select>
+                    <select name="" class="form-control col-lg-3" id="filtroCredenciada"></select>
+                    <input type="text" class="form-control col-lg-2" id="dataInicio" placeholder="Início" onfocus="(this.type='date')" onblur="(this.type='text')">
+                    <input type="text" class="form-control col-lg-2" id="dataFinal" placeholder="Fim" onfocus="(this.type='date')" onblur="(this.type='text')">
                     <button class="btn btn-success" type="button">IMPRIMIR</button>
                     <button class="btn btn-warning" type="button">ENVIAR POR EMAIL</button>
                   </div>
@@ -604,7 +606,8 @@
   <!-- endinject -->
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->
-   <script type="module" src="../../js/table/asos.js"></script>
+  <script type="module" src="../../js/table/asos.js"></script>
+  <script type="module" src="../../js/table/asos_filtros.js"></script>
 </body>
 
 </html>
