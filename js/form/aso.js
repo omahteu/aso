@@ -159,33 +159,29 @@ $(document).ready(function () {
         alert('ASO criado com sucesso!');
 
         this.reset();
-        //location.reload();
-        window.open("../../pages/forms/opcoes.html", "_blank");
+        location.reload();
+        //window.open("../../pages/forms/opcoes.html", "_blank");
     });
 });
 
-$(document).ready(function() {
-    // Exemplo de opções (pode ser populado dinamicamente)
+$(document).ready(function () {
+
     var tiposExameOptions = [
-      { value: 'opcao1', text: 'Opção 1' },
-      { value: 'opcao2', text: 'Opção 2' },
-      { value: 'opcao3', text: 'Opção 3' },
-      { value: 'opcao4', text: 'Opção 4' }
+
     ];
-  
-    // Popular as opções no select usando Select2
+
     $('#nomesExames').select2({
-      data: tiposExameOptions,
-      placeholder: 'Selecione...',
-      allowClear: true // Adiciona a opção de limpar seleção
+        data: tiposExameOptions,
+        placeholder: 'Selecione...',
+        allowClear: true
     });
-  
+
     // Capturar os itens selecionados quando o formulário for submetido
-    $('#seuFormulario').submit(function(event) {
-      event.preventDefault(); // Previne o envio padrão do formulário para exemplo aqui
-  
-      var selectedValues = $('#tiposExame').val();
-      console.log('Itens selecionados:', selectedValues);
-      
+    $('#seuFormulario').submit(function (event) {
+        event.preventDefault(); // Previne o envio padrão do formulário para exemplo aqui
+
+        var selectedValues = $('#tiposExame').val();
+        console.log('Itens selecionados:', selectedValues);
+
     });
-  });
+});
