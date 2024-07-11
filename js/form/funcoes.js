@@ -14,9 +14,9 @@ $(document).ready(function() {
         empresa[campoId] = $('#' + campoId).val();
       });
   
-      var funcoes = JSON.parse(localStorage.getItem('funcoes')) || [];
+      var funcoes = JSON.parse(sessionStorage.getItem('funcoes')) || [];
       funcoes.push(empresa);
-      localStorage.setItem('funcoes', JSON.stringify(funcoes));
+      sessionStorage.setItem('funcoes', JSON.stringify(funcoes));
   
       
   

@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    // Função para carregar e exibir os dados da localStorage na tabela
+    // Função para carregar e exibir os dados da sessionStorage na tabela
     function carregarNomesExames() {
-        // Obtém os dados da localStorage
-        var empresas = JSON.parse(localStorage.getItem('nomes')) || [];
+        // Obtém os dados da sessionStorage
+        var empresas = JSON.parse(sessionStorage.getItem('nomes')) || [];
         
         // Seleciona a tabela onde os dados serão exibidos
         var tabela = $('#tabelaNomesExames');
@@ -24,8 +24,8 @@ $(document).ready(function () {
     }
 
     function carregarTiposExames() {
-        // Obtém os dados da localStorage
-        var empresas = JSON.parse(localStorage.getItem('tipos')) || [];
+        // Obtém os dados da sessionStorage
+        var empresas = JSON.parse(sessionStorage.getItem('tipos')) || [];
         
         // Seleciona a tabela onde os dados serão exibidos
         var tabela = $('#tabelaTiposExames');

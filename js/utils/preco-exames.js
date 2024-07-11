@@ -2,7 +2,7 @@ $(document).on("change", "#nomesExames", function(e) {
     var selectedValues = $(this).val();
     console.log('Valores selecionados:', selectedValues);
 
-    var precos = JSON.parse(localStorage.getItem('precos'));
+    var precos = JSON.parse(sessionStorage.getItem('precos'));
 
     if (precos) {
 

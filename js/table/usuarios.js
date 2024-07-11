@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    // Função para carregar e exibir os dados da localStorage na tabela
+    // Função para carregar e exibir os dados da sessionStorage na tabela
     function carregarEmpresas() {
-        // Obtém os dados da localStorage
-        var empresas = JSON.parse(localStorage.getItem('usuarios')) || [];
+        // Obtém os dados da sessionStorage
+        var empresas = JSON.parse(sessionStorage.getItem('usuarios')) || [];
         
         // Seleciona a tabela onde os dados serão exibidos
         var tabela = $('#tabelaUsuarios');

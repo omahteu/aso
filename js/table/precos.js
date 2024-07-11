@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    // Função para carregar e exibir os dados da localStorage na tabela
+    // Função para carregar e exibir os dados da sessionStorage na tabela
     function carregarprecos() {
-        // Obtém os dados da localStorage
-        var precos = JSON.parse(localStorage.getItem('precos')) || [];
+        // Obtém os dados da sessionStorage
+        var precos = JSON.parse(sessionStorage.getItem('precos')) || [];
         
         // Seleciona a tabela onde os dados serão exibidos
         var tabela = $('#tabelaPrecos');
@@ -32,8 +32,8 @@ $(document).ready(function () {
     carregarprecos();
 
     function carregarNomesFantasia() {
-        // Obtém os dados da localStorage
-        var empresas = JSON.parse(localStorage.getItem('empresas')) || [];
+        // Obtém os dados da sessionStorage
+        var empresas = JSON.parse(sessionStorage.getItem('empresas')) || [];
 
         // Seleciona o select onde os nomes fantasia serão exibidos
         var select = $('#filtroEmpresa');
@@ -60,8 +60,8 @@ $(document).ready(function () {
 
         // Verifica se há algum valor selecionado
         if (empresaSelecionada !== '') {
-            // Recupera os dados do localStorage (supondo que estejam em formato JSON)
-            var empresas = JSON.parse(localStorage.getItem('asos'));
+            // Recupera os dados do sessionStorage (supondo que estejam em formato JSON)
+            var empresas = JSON.parse(sessionStorage.getItem('asos'));
 
             // Filtra os dados com base na empresa selecionada
             var dadosFiltrados = empresas.filter(function(item) {

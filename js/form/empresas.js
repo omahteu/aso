@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
   function carregarUnidades() {
-    // Obtém os dados da localStorage
-    var empresas = JSON.parse(localStorage.getItem('unidades')) || [];
+    // Obtém os dados da sessionStorage
+    var empresas = JSON.parse(sessionStorage.getItem('unidades')) || [];
 
     // Seleciona o select onde os nomes fantasia serão exibidos
     var select = $('#unidades');
@@ -50,9 +50,9 @@ $(document).ready(function () {
       empresa[campoId] = $('#' + campoId).val();
     });
 
-    var empresas = JSON.parse(localStorage.getItem('empresas')) || [];
+    var empresas = JSON.parse(sessionStorage.getItem('empresas')) || [];
     empresas.push(empresa);
-    localStorage.setItem('empresas', JSON.stringify(empresas));
+    sessionStorage.setItem('empresas', JSON.stringify(empresas));
 
 
 

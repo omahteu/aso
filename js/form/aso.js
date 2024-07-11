@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
     function carregarUnidades() {
-        // Obtém os dados da localStorage
-        var empresas = JSON.parse(localStorage.getItem('unidades')) || [];
+        // Obtém os dados da sessionStorage
+        var empresas = JSON.parse(sessionStorage.getItem('unidades')) || [];
 
         // Seleciona o select onde os nomes fantasia serão exibidos
         var select = $('#unidade');
@@ -22,8 +22,8 @@ $(document).ready(function () {
     carregarUnidades()
 
     function carregarNomesFantasia() {
-        // Obtém os dados da localStorage
-        var empresas = JSON.parse(localStorage.getItem('empresas')) || [];
+        // Obtém os dados da sessionStorage
+        var empresas = JSON.parse(sessionStorage.getItem('empresas')) || [];
 
         // Seleciona o select onde os nomes fantasia serão exibidos
         var select = $('#empresa');
@@ -43,8 +43,8 @@ $(document).ready(function () {
     carregarNomesFantasia();
 
     function carregarNomesCredenciadas() {
-        // Obtém os dados da localStorage
-        var empresas = JSON.parse(localStorage.getItem('credenciadas')) || [];
+        // Obtém os dados da sessionStorage
+        var empresas = JSON.parse(sessionStorage.getItem('credenciadas')) || [];
 
         // Seleciona o select onde os nomes fantasia serão exibidos
         var select = $('#credenciada');
@@ -64,8 +64,8 @@ $(document).ready(function () {
     carregarNomesCredenciadas();
 
     function carregarTiposExames() {
-        // Obtém os dados da localStorage
-        var empresas = JSON.parse(localStorage.getItem('tipos')) || [];
+        // Obtém os dados da sessionStorage
+        var empresas = JSON.parse(sessionStorage.getItem('tipos')) || [];
 
         // Seleciona o select onde os nomes fantasia serão exibidos
         var select = $('#tiposExame');
@@ -85,8 +85,8 @@ $(document).ready(function () {
     carregarTiposExames()
 
     function carregarNomesExames() {
-        // Obtém os dados da localStorage
-        var empresas = JSON.parse(localStorage.getItem('nomes')) || [];
+        // Obtém os dados da sessionStorage
+        var empresas = JSON.parse(sessionStorage.getItem('nomes')) || [];
 
         // Seleciona o select onde os nomes fantasia serão exibidos
         var select = $('#nomesExames');
@@ -107,7 +107,7 @@ $(document).ready(function () {
 
     function carregarNomesFuncoes() {
 
-        var empresas = JSON.parse(localStorage.getItem('funcoes')) || [];
+        var empresas = JSON.parse(sessionStorage.getItem('funcoes')) || [];
 
         var select = $('#funcao');
 
@@ -150,9 +150,9 @@ $(document).ready(function () {
             empresa[campoId] = $('#' + campoId).val();
         });
 
-        var asos = JSON.parse(localStorage.getItem('asos')) || [];
+        var asos = JSON.parse(sessionStorage.getItem('asos')) || [];
         asos.push(empresa);
-        localStorage.setItem('asos', JSON.stringify(asos));
+        sessionStorage.setItem('asos', JSON.stringify(asos));
 
 
 

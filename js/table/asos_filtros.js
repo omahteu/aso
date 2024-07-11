@@ -12,7 +12,7 @@ function atualizarTabela() {
     var inicio = $('#dataInicio').val();
     var final = $('#dataFinal').val();
     
-    var asos = JSON.parse(localStorage.getItem('asos')) || [];
+    var asos = JSON.parse(sessionStorage.getItem('asos')) || [];
 
     if (empresa) {
         valores.empresa = empresa;

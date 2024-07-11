@@ -17,9 +17,9 @@ $(document).ready(function() {
         empresa[campoId] = $('#' + campoId).val();
       });
   
-      var unidades = JSON.parse(localStorage.getItem('unidades')) || [];
+      var unidades = JSON.parse(sessionStorage.getItem('unidades')) || [];
       unidades.push(empresa);
-      localStorage.setItem('unidades', JSON.stringify(unidades));
+      sessionStorage.setItem('unidades', JSON.stringify(unidades));
   
       
   
