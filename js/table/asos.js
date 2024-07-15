@@ -2,8 +2,8 @@ $(document).ready(function () {
     
 
     function carregarprecos() {
-        var precos = JSON.parse(sessionStorage.getItem('asos')) || [];
-        var tabprecos = JSON.parse(sessionStorage.getItem('precos')) || [];
+        var precos = JSON.parse(localStorage.getItem('asos')) || [];
+        var tabprecos = JSON.parse(localStorage.getItem('precos')) || [];
         var tabela = $('#tabelaAsos');
         tabela.empty();
 
@@ -20,11 +20,9 @@ $(document).ready(function () {
            
             nomesExames.forEach(nomeExame => {
                 let examesFiltrados = tabprecos.filter(preco => preco.nomesExames === nomeExame);
-                // Adicionar os exames filtrados ao array principal
                 todosExamesFiltrados.push(...examesFiltrados);
             });
 
-            console.log(todosExamesFiltrados);
             var cpf = formatarCPF(empresa.cpf);
 
             var row = '<tr>' +
@@ -51,7 +49,7 @@ $(document).ready(function () {
     carregarprecos();
 
     function carregarNomesFantasia() {
-        var empresas = JSON.parse(sessionStorage.getItem('empresas')) || [];
+        var empresas = JSON.parse(localStorage.getItem('empresas')) || [];
         var select = $('#filtroEmpresa');
         select.empty();
         select.append('<option hidden>Selecione uma empresa...</option>');
@@ -63,7 +61,7 @@ $(document).ready(function () {
     carregarNomesFantasia();
 
     function carregarCredenciadas() {
-        var empresas = JSON.parse(sessionStorage.getItem('credenciadas')) || [];
+        var empresas = JSON.parse(localStorage.getItem('credenciadas')) || [];
         var select = $('#filtroCredenciada');
         select.empty();
         select.append('<option value="" hidden>Selecione uma empresa credenciada...</option>');

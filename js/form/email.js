@@ -14,9 +14,9 @@ $(document).ready(function() {
         empresa[campoId] = $('#' + campoId).val();
       });
   
-      var email = JSON.parse(sessionStorage.getItem('email')) || [];
+      var email = JSON.parse(localStorage.getItem('email')) || [];
       email.push(empresa);
-      sessionStorage.setItem('email', JSON.stringify(email));
+      localStorage.setItem('email', JSON.stringify(email));
   
       
   

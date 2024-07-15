@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    // Função para carregar e exibir os dados da sessionStorage na tabela
+    // Função para carregar e exibir os dados da localStorage na tabela
     function carregarunidades() {
-        // Obtém os dados da sessionStorage
-        var unidades = JSON.parse(sessionStorage.getItem('unidades')) || [];
+        // Obtém os dados da localStorage
+        var unidades = JSON.parse(localStorage.getItem('unidades')) || [];
         
         // Seleciona a tabela onde os dados serão exibidos
         var tabela = $('#tabelaUnidades');
