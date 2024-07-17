@@ -1,52 +1,52 @@
 $(document).ready(function () {
     
 
-    function carregarprecos() {
-        var precos = JSON.parse(localStorage.getItem('asos')) || [];
-        var tabprecos = JSON.parse(localStorage.getItem('precos')) || [];
-        var tabela = $('#tabelaAsos');
-        tabela.empty();
+    // function carregarprecos() {
+    //     var precos = JSON.parse(localStorage.getItem('asos')) || [];
+    //     var tabprecos = JSON.parse(localStorage.getItem('precos')) || [];
+    //     var tabela = $('#tabelaAsos');
+    //     tabela.empty();
 
-        function formatarCPF(cpf) {
-            return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
-        }
+    //     function formatarCPF(cpf) {
+    //         return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+    //     }
 
-        precos.forEach(function (empresa, index) {
+    //     precos.forEach(function (empresa, index) {
 
-            let nomesExames = empresa.nomesExames;
+    //         let nomesExames = empresa.nomesExames;
 
-            let todosExamesFiltrados = [];
+    //         let todosExamesFiltrados = [];
 
            
-            nomesExames.forEach(nomeExame => {
-                let examesFiltrados = tabprecos.filter(preco => preco.nomesExames === nomeExame);
-                todosExamesFiltrados.push(...examesFiltrados);
-            });
+    //         nomesExames.forEach(nomeExame => {
+    //             let examesFiltrados = tabprecos.filter(preco => preco.nomesExames === nomeExame);
+    //             todosExamesFiltrados.push(...examesFiltrados);
+    //         });
 
-            var cpf = formatarCPF(empresa.cpf);
+    //         var cpf = formatarCPF(empresa.cpf);
 
-            var row = '<tr>' +
-                '<td> <input type="checkbox" name="" id=""> </td>' +
-                '<td>' + empresa.unidade + '</td>' +
-                '<td>' + empresa.empresa + '</td>' +
-                '<td>' + empresa.credenciada + '</td>' +
-                '<td>' + empresa.nome + '</td>' +
-                '<td>' + empresa.rg + '</td>' +
-                '<td>' + cpf + '</td>' +
-                '<td>' + empresa.nascimento + '</td>' +
-                '<td>' + empresa.sexo + '</td>' +
-                '<td>' + empresa.funcao + '</td>' +
-                '<td>' + empresa.dataExame + '</td>' +
-                '<td>' + empresa.tiposExame + '</td>' +
-                '<td>' + empresa.nomesExames + '</td>' +
-                '<td>' + todosExamesFiltrados[0].valorExame + '</td>' +
-                '<td>' + empresa.observacao + '</td>' +
-                '</tr>';
-            tabela.append(row);
-        });
-    }
+    //         var row = '<tr>' +
+    //             '<td> <input type="checkbox" name="" id=""> </td>' +
+    //             '<td>' + empresa.unidade + '</td>' +
+    //             '<td>' + empresa.empresa + '</td>' +
+    //             '<td>' + empresa.credenciada + '</td>' +
+    //             '<td>' + empresa.nome + '</td>' +
+    //             '<td>' + empresa.rg + '</td>' +
+    //             '<td>' + cpf + '</td>' +
+    //             '<td>' + empresa.nascimento + '</td>' +
+    //             '<td>' + empresa.sexo + '</td>' +
+    //             '<td>' + empresa.funcao + '</td>' +
+    //             '<td>' + empresa.dataExame + '</td>' +
+    //             '<td>' + empresa.tiposExame + '</td>' +
+    //             '<td>' + empresa.nomesExames + '</td>' +
+    //             '<td>' + todosExamesFiltrados[0].valorExame + '</td>' +
+    //             '<td>' + empresa.observacao + '</td>' +
+    //             '</tr>';
+    //         tabela.append(row);
+    //     });
+    // }
 
-    carregarprecos();
+    // carregarprecos();
 
     function carregarNomesFantasia() {
         var empresas = JSON.parse(localStorage.getItem('empresas')) || [];

@@ -90,14 +90,22 @@ function atualizarTabela() {
     });
 }
 
-$(document).on("change", "#filtroEmpresa, #filtroCredenciada", function() {
-    atualizarTabela();
-});
+// $(document).on("change", "#filtroEmpresa, #filtroCredenciada", function() {
+//     atualizarTabela();
+// });
 
-$(document).on("change", "#dataInicio", function() {
-    atualizarTabela();
+// $(document).on("change", "#dataInicio", function() {
+//     atualizarTabela();
+// })
+
+// $(document).on("change", "#dataFinal", function() {
+//     atualizarTabela();
+// })
+
+$(document).on("click", "#search_params", function() {
+    atualizarTabela()
 })
 
-$(document).on("change", "#dataFinal", function() {
-    atualizarTabela();
+$(document).on("click", "#repeat", function() {
+    location.reload()
 })
