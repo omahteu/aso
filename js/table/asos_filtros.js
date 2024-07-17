@@ -102,10 +102,12 @@ function atualizarTabela() {
 //     atualizarTabela();
 // })
 
-$(document).on("click", "#search_params", function() {
+$(document).on("click", "#print_resultados", function() {
     atualizarTabela()
+    print()
 })
 
-$(document).on("click", "#repeat", function() {
+$(document).on("click", "#send_email", function() {
+    alert("Dados Enviados por Email")
     location.reload()
 })
