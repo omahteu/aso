@@ -12,9 +12,6 @@ $(document).ready(function () {
 
         // Itera sobre os dados das unidades e cria as linhas da tabela
         unidades.forEach(function (empresa, index) {
-            var row = '<tr>' +
-                '<td> <input type="checkbox" name="" id=""> </td>' +
-                '<td> <input type="checkbox" name="" id=""> </td>' +
                 '<td>' + empresa.nome + '</td>' +
                 '<td>' + empresa.cidade + '</td>' +
                 '<td>' + empresa.estado + '</td>' +

@@ -13,8 +13,6 @@ $(document).ready(function () {
         // Itera sobre os dados das credenciadas e cria as linhas da tabela
         credenciadas.forEach(function (empresa, index) {
             var row = '<tr>' +
-                '<td> <input type="checkbox" name="" id=""> </td>' +
-                '<td> <input type="checkbox" name="" id=""> </td>' +
                 '<td>' + empresa.unidade + '</td>' +
                 '<td>' + empresa.empresa + '</td>' +
                 '<td>' + empresa.nome + '</td>' +

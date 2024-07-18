@@ -331,16 +331,21 @@
                   <h4 class="card-title">Preços</h4>
                   <div class="row">
                     <select name="" class="form-control col-lg-4" id="filtroEmpresa"></select>
-                    <button class="btn btn-success" type="button">IMPRIMIR</button>
-                    <button class="btn btn-warning" type="button">ENVIAR POR EMAIL</button>
+                    <button class="btn btn-info" type="button" id="print_resultados">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
+                        <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+                        <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1"/>
+                      </svg>
+                    </button>
+                    <button class="btn btn-info" type="button" id="send_email">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
+                      </svg>
+                    </button>
                   </div>
                   <div class="table-responsive">
                     <table class="table table-striped">
                       <thead>
-                        <tr>
-                          <th><button class="btn btn-success"></button></th>
-                          <th><button class="btn btn-warning"></button></th>
-                          <th>Editar</th>
                           <th>Unidade</th>
                           <th>Empresa</th>
                           <th>E. Credenciada</th>
