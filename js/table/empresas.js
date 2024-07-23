@@ -23,6 +23,7 @@ $(document).ready(function () {
                 '<td>' + empresa.bairro + '</td>' +
                 '<td>' + empresa.cidade + '</td>' +
                 '<td>' + empresa.estado + '</td>' +
+                '<td>' + empresa.observacao + '</td>' +
                 '<td>' +
                     '<button type="button" class="btn btn-info">'+
                         '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">'+
@@ -96,6 +97,7 @@ $(document).ready(function () {
                                 '<td>' + empresa.bairro + '</td>' +
                                 '<td>' + empresa.cidade + '</td>' +
                                 '<td>' + empresa.estado + '</td>' +
+                                '<td>' + empresa.observacao + '</td>' +
                                 '<td>' +
                                     '<button type="button" class="btn btn-info">'+
                                         '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">'+

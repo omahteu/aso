@@ -40,7 +40,8 @@ $(document).ready(function () {
       'complemento', // Complemento
       'bairro', // Bairro
       'cidade', // Cidade
-      'estado' // Estado
+      'estado',
+      'observacao'
     ];
 
     var empresa = {};

@@ -544,10 +544,6 @@
                       <input type="text" class="form-control" id="telefone" placeholder="Telefone">
                     </div>
                     <div class="form-group">
-                      <label for="email">Email</label>
-                      <input type="email" class="form-control" id="email" placeholder="Email">
-                    </div>
-                    <div class="form-group">
                       <label for="cep">CEP</label>
                       <input type="text" class="form-control" id="cep" placeholder="CEP">
                     </div>
@@ -568,12 +564,16 @@
                       <input type="text" class="form-control" id="bairro" placeholder="Bairro">
                     </div>
                     <div class="form-group">
-                      <label for="cidade">Cidade</label>
-                      <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                      <label for="estado">Estado</label>
+                      <select class="form-control" id="estado">
+                        <option value="" hidden>Estado</option>
+                      </select>
                     </div>
                     <div class="form-group">
-                      <label for="estado">Estado</label>
-                      <input type="text" class="form-control" id="estado" placeholder="Estado">
+                      <label for="cidade">Cidade</label>
+                      <select class="form-control" id="cidade">
+                        <option value="" hidden>Cidade</option>
+                      </select>
                     </div>
                     <div class="form-group">
                       <label for="observacoes">Observações</label>
@@ -622,6 +622,9 @@
   <script src="../../js/select2.js"></script>
   <!-- End custom js for this page-->
    <script type="module" src="../../js/form/credenciadas.js"></script>
+   <script type="module" src="../../js/select_estados.js"></script>
+   <script type="module" src="../../js/utils/mascara-telefone.js"></script>
+   <script type="module" src="../../js/utils/mascara-cep.js"></script>
 </body>
 
 </html>

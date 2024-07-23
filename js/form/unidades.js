@@ -7,7 +7,6 @@ $(document).ready(function() {
         'nome', // Nome Fantasia
         'cidade', // Inscrição Estadual
         'estado', // CNPJ
-        'email', // Telefone
       ];
   
       var empresa = {};

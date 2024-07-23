@@ -17,7 +17,6 @@ $(document).ready(function () {
                 '<td>' + empresa.nome + '</td>' +
                 '<td>' + empresa.cnpj + '</td>' +
                 '<td>' + empresa.telefone + '</td>' +
-                '<td>' + empresa.email + '</td>' +
                 '<td>' + empresa.cep + '</td>' +
                 '<td>' + empresa.rua + '</td>' +
                 '<td>' + empresa.numero + '</td>' +
@@ -93,7 +92,6 @@ $(document).ready(function () {
                                 '<td>' + empresa.nome + '</td>' +
                                 '<td>' + empresa.cnpj + '</td>' +
                                 '<td>' + empresa.telefone + '</td>' +
-                                '<td>' + empresa.email + '</td>' +
                                 '<td>' + empresa.cep + '</td>' +
                                 '<td>' + empresa.rua + '</td>' +
                                 '<td>' + empresa.numero + '</td>' +

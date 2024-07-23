@@ -57,7 +57,6 @@ $(document).ready(function () {
             'matricula',
             'cnpj', // CNPJ
             'telefone', // Telefone
-            'email',
             'cep', // CEP
             'rua', // Rua
             'numero', // Número
