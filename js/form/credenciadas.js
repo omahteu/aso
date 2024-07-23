@@ -49,12 +49,8 @@ $(document).ready(function () {
 
         // Define um array para armazenar os nomes dos campos que queremos capturar
         var campos = [
-            'unidade',
             'empresa',
-            'eCredenciadas', // Nome Fantasia
             'nome',
-            'ie', // Inscrição Estadual
-            'matricula',
             'cnpj', // CNPJ
             'telefone', // Telefone
             'cep', // CEP
