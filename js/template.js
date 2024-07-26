@@ -1,4 +1,4 @@
-(function($) {
+s(function($) {
   'use strict';
   $(function() {
     var body = $('body');
