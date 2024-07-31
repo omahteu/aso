@@ -1,3 +1,16 @@
+<?php
+session_start(); // Iniciar a sessão
+
+if (!isset($_SESSION['user_id'])) {
+    // Se o usuário não estiver logado, redirecionar para a página de login
+    header("Location: ../../index.html");
+    exit();
+}
+
+// O usuário está logado, continuar com a lógica da página
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -227,6 +240,7 @@
     </div>
     <!-- container-scroller -->
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- plugins:js -->
     <script src="../../js/vendor.bundle.base.js"></script>
     <!-- endinject -->
